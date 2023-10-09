@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometryCalculator", "GeometryCalculator\GeometryCalculator.csproj", "{94E24FCA-2FD3-435B-A72E-51A0F96B622C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometryCalculator.Tests", "GeometryCalculator.Tests\GeometryCalculator.Tests.csproj", "{7B568960-E408-46A2-A05C-0AAD7C0A7792}"
+	ProjectSection(ProjectDependencies) = postProject
+		{94E24FCA-2FD3-435B-A72E-51A0F96B622C} = {94E24FCA-2FD3-435B-A72E-51A0F96B622C}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94E24FCA-2FD3-435B-A72E-51A0F96B622C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94E24FCA-2FD3-435B-A72E-51A0F96B622C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94E24FCA-2FD3-435B-A72E-51A0F96B622C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94E24FCA-2FD3-435B-A72E-51A0F96B622C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B568960-E408-46A2-A05C-0AAD7C0A7792}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B568960-E408-46A2-A05C-0AAD7C0A7792}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B568960-E408-46A2-A05C-0AAD7C0A7792}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B568960-E408-46A2-A05C-0AAD7C0A7792}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5B5C0D8E-0F4A-4AB1-88A5-CB1D44C41694}
+	EndGlobalSection
+EndGlobal
