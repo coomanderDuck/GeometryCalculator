@@ -6,7 +6,7 @@ namespace GeometryCalculator.Models
     {
         public double Radius { get; }
 
-        public Circle(double radius)
+        public Circle(double radius) : base(radius)
         {
             Radius = radius;
         }
@@ -18,9 +18,10 @@ namespace GeometryCalculator.Models
             return pi * Math.Pow(Radius, 2);
         }
 
-        protected internal override void Validate()
+        protected internal override void Validate(params double[] args)
         {
-            if (Radius <= 0)
+            var radius = args[0];
+            if (radius <= 0)
             {
                 throw new ValidationException("Радиус должен быть положительным числом.");
             }

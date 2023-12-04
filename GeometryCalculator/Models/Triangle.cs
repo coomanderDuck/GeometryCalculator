@@ -10,7 +10,7 @@ namespace GeometryCalculator.Models
 
         public double SideC { get; }
 
-        public Triangle(double sideA, double sideB, double sideC)
+        public Triangle(double sideA, double sideB, double sideC) : base(sideA, sideB, sideC)
         {
             SideA = sideA;
             SideB = sideB;
@@ -36,25 +36,24 @@ namespace GeometryCalculator.Models
             return Math.Pow(sides[0], 2) + Math.Pow(sides[1], 2) == Math.Pow(sides[2], 2);
         }
 
-        protected internal override void Validate()
+        protected internal override void Validate(params double[] args)
         {
-            if (SideA <= 0 || SideB <= 0 || SideC <= 0)
+            var sideA = args[0];
+            var sideB = args[1];
+            var sideC = args[2];
+            if (sideA <= 0 || sideB <= 0 || sideC <= 0)
             {
                 throw new ValidationException("Длины сторон треугольника должны быть положительными числами.");
             }
 
-            if (!IsTriangleValid())
+            if (!IsTriangleValid(sideA, sideB, sideC))
             {
                 throw new ValidationException("Треугольник с такими сторонами не существует.");
             }
         }
 
-        private bool IsTriangleValid()
+        private bool IsTriangleValid(double sideA, double sideB, double sideC)
         {
-            var sideA = SideA;
-            var sideB = SideB;
-            var sideC = SideC;
-
             return sideA + sideB > sideC && sideA + sideC > sideB && sideB + sideC > sideA;
         }
     }

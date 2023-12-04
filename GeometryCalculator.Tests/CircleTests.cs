@@ -16,11 +16,9 @@ namespace GeometryCalculator.Tests
         }
 
         [Fact]
-        public void CalculateArea_NonPositiveSideLength_ShouldThrowValidationException()
+        public void Create_NonPositiveSideLength_ShouldThrowValidationException()
         {
-            var circle = new Circle(-5);
-
-            var exception = Assert.Throws<ValidationException>(() => circle.CalculateArea());
+            var exception = Assert.Throws<ValidationException>(() => new Circle(-5));
             Assert.Equal("Радиус должен быть положительным числом.", exception.Message);
         }
     }
